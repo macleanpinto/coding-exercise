@@ -12,9 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { ToasterModule, ToasterService } from 'angular2-toaster';
-
 import { ShopComponent } from './shop/shop.component';
 import { CartComponent } from './cart/cart.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
+import { TodoComponent } from './todo/todo.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { TodoService } from './services/todo.service';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,10 @@ import { CartComponent } from './cart/cart.component';
     LayoutComponent,
     ShopComponent,
     CartComponent,
-    SumPipe
+    SumPipe,
+    TodoListComponent,
+    TodoItemComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +41,7 @@ import { CartComponent } from './cart/cart.component';
     ReactiveFormsModule,
     ToasterModule
   ],
-  providers: [CartService, ProductService, SumPipe, ToasterService],
+  providers: [CartService, ProductService, SumPipe, ToasterService, TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

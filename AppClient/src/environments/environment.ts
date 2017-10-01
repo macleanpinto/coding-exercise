@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  fetchProducts: '/resources/fetchProducts.json'
+  fetchProducts: '/resources/fetchProducts.json',
+  fetchtodoList: '/resources/fetchTodoList.json'
 };

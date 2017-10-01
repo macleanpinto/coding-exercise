@@ -19,7 +19,7 @@ export class CartService {
         // if we dont have  any cart history, create a empty cart
         if (!this._storage.getItem('cart')) {
 
-            let emptyMap: { [key: string]: number; } = {};
+            const emptyMap: { [key: string]: number; } = {};
             this.setCart(emptyMap);
 
         }
