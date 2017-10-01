@@ -14,10 +14,7 @@ import { HttpModule, Http } from '@angular/http';
 import { ToasterModule, ToasterService } from 'angular2-toaster';
 import { ShopComponent } from './shop/shop.component';
 import { CartComponent } from './cart/cart.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoComponent } from './todo/todo.component';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TodoService } from './services/todo.service';
 import { StoreModule } from '@ngrx/store';
 
@@ -28,8 +25,6 @@ import { StoreModule } from '@ngrx/store';
     ShopComponent,
     CartComponent,
     SumPipe,
-    TodoListComponent,
-    TodoItemComponent,
     TodoComponent
   ],
   imports: [
