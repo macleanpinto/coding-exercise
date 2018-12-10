@@ -4,7 +4,7 @@ User registration app with Spring boot and Angular6
 
 
 This web application offers HTTP endpoint (REST) to register a user. 
--**end point url:** http://localhost:8080/v1/user/register
+- **end point url:** http://localhost:8080/v1/user/register
 
 The definition of the endpoint is:
 
