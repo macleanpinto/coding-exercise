@@ -19,15 +19,20 @@ This will be the web application offers an HTTP endpoint (REST) to register a us
 
 ---
 
-#### Download
+#### Steps to run the project :
 
-PrimeNG is available at NPM, if you have an existing application run the following command to download it to your project.
+Run the following command to start the project.
 
 ```
-npm install primeng --save
-npm install primeicons --save
+mvn clean install
+cd AppWeb/target
+java -jar AppWeb-1.0.0-SNAPSHOT.jar
 ```
 
-#### Angular CLI Integration
+#### Note :
+
+** Exclusion Service is a Stubbed service to blacklist all user's with SSN greater than 555555555**
+
+
 
 
