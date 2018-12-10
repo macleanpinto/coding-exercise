@@ -3,7 +3,7 @@
 User registration app with Spring boot and Angular6
 
 
-This will be the web application offers an HTTP endpoint (REST) to register a user. The definition of the endpoint is:
+This web application offers an HTTP endpoint (REST) to register a user. The definition of the endpoint is:
 
 - **method name:** register
 - **parameters:**
@@ -31,7 +31,7 @@ java -jar AppWeb-1.0.0-SNAPSHOT.jar
 
 #### Note :
 
-** Exclusion Service is a Stubbed service to blacklist all user's with SSN greater than 555555555**
+**Exclusion Service is a Stubbed service to blacklist all user's with SSN greater than 555555555**
 
 
 
