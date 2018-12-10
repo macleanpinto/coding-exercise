@@ -3,6 +3,7 @@ package com.interview.controller;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,8 +14,7 @@ import com.interview.controller.mapper.UserMapper;
 import com.interview.datatransferobject.UserDTO;
 import com.interview.domainobject.UserDO;
 import com.interview.exception.ConstraintsViolationException;
-
-import org.springframework.http.HttpStatus;
+import com.interview.exception.UserBlacklistedException;
 import com.interview.service.user.UserService;
 
 /**
@@ -36,12 +36,12 @@ public class UserController
     }
 
 
-    @PostMapping
+    @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
-    public UserDTO createCar(@Valid @RequestBody UserDTO UserDTO) throws ConstraintsViolationException
+    public UserDTO register(@Valid @RequestBody UserDTO userDTO) throws ConstraintsViolationException, UserBlacklistedException
     {
-        UserDO userDO = UserMapper.makeUserDO(UserDTO);
-        return UserMapper.makeUserDTO(userService.create(userDO));
+        UserDO userDO = UserMapper.makeUserDO(userDTO);
+        return UserMapper.makeUserDTO(userService.register(userDO));
     }
 
 }
