@@ -5,22 +5,16 @@ User registration app with Spring boot and Angular6
 
 This will be the web application offers an HTTP endpoint (REST) to register a user. The definition of the endpoint is:
 
-checks:
-parameter's are valid according to specification
-user hasn't been already registered
-user is not blacklisted (see 'Registration' service)
-returns ok/ empty/ void response if user could be registered, for any failure throws an appropriate remote exception/ error
-
 - **method name:** register
 - **parameters:**
-			- **username:** alphanumerical, no spaces.
-			- **password:** at least four characters, at least one upper case character, at least one number
-			- **date of birth:**
-			- **Social Security Number (SSN):**
+ 	- **username:** alphanumerical, no spaces.
+	- **password:** at least four characters, at least one upper case character, at least one number
+	- **date of birth:**
+	- **Social Security Number (SSN):**
 - **checks:**	
-			- parameter's are valid according to specification.
-			- user hasn't been already registered
-			- user is not blacklisted 
+	- parameter's are valid according to specification.
+	- user hasn't been already registered
+	- user is not blacklisted 
 - returns ok response if user could be registered, for any failure throws an appropriate remote exception/ error
 
 ---
