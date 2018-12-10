@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.data = '';
+    this.data = {};
 
     // stop here if form is invalid
     if (this.registerForm.invalid) {
